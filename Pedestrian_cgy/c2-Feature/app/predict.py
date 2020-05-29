@@ -7,7 +7,8 @@ from hog import Hog_descriptor
 
 
 def predict(image_index_str):
-    img = cv2.imread('/container/data/' + str(image_index_str) + ' .png', cv2.IMREAD_GRAYSCALE)
+    img = cv2.imread('/container/data/' + image_index_str + ' .png', cv2.IMREAD_GRAYSCALE)
+    #img = cv2.imread('../data/' + image_index_str + ' .png', cv2.IMREAD_GRAYSCALE)
     cv2.resize(img, (360, 360))
     hog = Hog_descriptor(img, cell_size=2, bin_size=2)
     vector, image = hog.extract()

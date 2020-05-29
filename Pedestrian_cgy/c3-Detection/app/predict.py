@@ -9,15 +9,17 @@ import cv2
 import matplotlib.pyplot as plt
 
 
-# initialize the HOG descriptor/person detector
-hog = cv2.HOGDescriptor()
-hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
 
 
 def predict(image_index_str):
+
+	# initialize the HOG descriptor/person detector
+	hog = cv2.HOGDescriptor()
+	hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 	imgage = cv2.imread('/container/data/' + str(image_index_str) + ' .png')
 	
+	# Read image
 	image = imutils.resize(image, width=min(400, image.shape[1]))
 	orig = image.copy()
 
@@ -37,4 +39,6 @@ def predict(image_index_str):
 	#plt.imshow(image, cmap=plt.cm.gray)
 	#plt.show()
 
-	return str("Finished")
+	return str("Detection Finished")
+
+predict('23')
