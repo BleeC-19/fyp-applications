@@ -2,6 +2,6 @@
 2
 c1,test,speech_cgy:c1,false,0
 c2,test,speech_cgy:c2,false,0
-c3,test,speech_cgy:c3,false,0
+c3,test,speech_cgy:c3,true,0
 dist[1->2]
 reduce[2->3]

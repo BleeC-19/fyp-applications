@@ -18,7 +18,9 @@ def predict(input_str):
                 return str(t.text)
         #print([(t.text, t.dep_, t.head.text) for t in doc if t.dep_ != "-"])
     #print(t.text)
-    return "Undetected"
+    return str("Undetected")
+
+predict("I want an apple.")
 
 
 

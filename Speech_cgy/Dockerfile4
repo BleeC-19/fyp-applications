@@ -1,9 +1,10 @@
 FROM ubuntu:18.04
-RUN apt-get update
+RUN apt-get update --fix-missing
 RUN apt-get install python3 python3-pip -y
-RUN pip3 install numpy pyttsx3
+RUN pip3 install pyttsx3
 RUN pip3 install grpcio
 RUN pip3 install protobuf
+RUN apt-get install libsm6 libxrender1 libfontconfig1 libxext-dev libespeak1 -y
 
 # container will have: predict.py, server.py
 ADD Speech_cgy/c4-Speech/app /container/

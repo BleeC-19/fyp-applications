@@ -23,8 +23,8 @@ def predict(input_str):
     correct = 0
     i = 0
     if data['Positive']>data['Negative']:
-        return ("User is happy")
-    return "User is Unhappy"
+        return ("happy")
+    return "unhappy"
 
 
 predict("I am happy")

@@ -2,11 +2,12 @@ FROM ubuntu:18.04
 RUN apt-get update --fix-missing
 RUN apt-get install python3 -y
 RUN apt-get install python3-pip -y
-RUN pip3 install grpcio
 RUN apt-get install wget zip unzip -y
 
 RUN pip3 install SpeechRecognition
 RUN apt-get install -y swig libpulse-dev libasound2-dev
+RUN apt-get install libsm6 libxrender1 libfontconfig1 libxext-dev -y
+
 RUN pip3 install pocketsphinx
 
 RUN pip3 install grpcio
